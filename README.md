@@ -2,11 +2,11 @@
 
 ## **Resumo**
 
-Este projeto visa prever os preços de veículos com base em seus atributos técnicos e categóricos, utilizando aprendizado de máquina (ML) integrado com a interface interativa do **Streamlit**. A jornada incluiu desde a limpeza de dados altamente problemáticos até a criação de uma aplicação web funcional. Ao longo do caminho, foi fundamental lidar com limitações da base de dados e refletir sobre conceitos clássicos como *“Garbage in, Garbage out”*.
+Este projeto visa prever os preços de veículos com base em seus atributos técnicos e categóricos, utilizando aprendizado de máquina (ML) integrado com a interface interativa do **Streamlit**. A jornada incluiu desde a limpeza de dados até a criação de uma aplicação web funcional. Ao longo do caminho, foi fundamental lidar com limitações da base de dados e refletir sobre conceitos clássicos como *“Garbage in, Garbage out”*.
 
 ## **1. Introdução**
 
-Prever preços de automóveis é uma tarefa desafiadora, especialmente quando se trabalha com dados reais e imperfeitos. O objetivo foi criar uma aplicação simples, porém funcional, que permitisse analisar, modelar e prever o valor de um carro com base em seus atributos.
+ O objetivo foi criar uma aplicação simples, porém funcional, que permitisse analisar, modelar e prever o valor de um carro com base em seus atributos.
 
 A solução foi construída com:
 - **Python + Streamlit** para a interface web,
@@ -32,13 +32,13 @@ Essas ações foram essenciais para tornar os dados minimamente adequados à mod
 
 ## **3. Análise Exploratória: Entendendo o Terreno**
 
-O módulo de **Análise Exploratória** permitiu ao usuário examinar a distribuição de variáveis categóricas e numéricas:
+O módulo de **Análise Exploratória** permitiu examinar a distribuição de variáveis categóricas e numéricas:
 - Frequência das montadoras, tipos de combustível, câmbios, etc.
 - Distribuições de variáveis contínuas e discretas por meio de **boxplots** e **barplots**.
 - Análise temporal simplificada agrupando o ano de produção por décadas.
 
 Isso possibilitou insights importantes como:
-- A alta concentração de carros produzidos entre 2005 e 2020,
+- A alta concentração de carros produzidos entre décadas,
 - A prevalência de alguns volumes de motor e número de airbags.
 
 ## **4. Modelagem Preditiva: Random Forest em Ação**
@@ -63,14 +63,14 @@ A modelagem foi feita usando o algoritmo **Random Forest Regressor**, selecionad
 
 ## **5. Interface de Previsão: Streamlit e Interatividade**
 
-Por fim, a aba de **previsão** permitiu que o usuário inserisse características de um carro fictício e obtivesse o preço estimado.
+Por fim, a aba de **previsão** permite que o usuário inserisse características de um carro fictício e obtivesse o preço estimado.
 
 ### Funcionalidades:
 - Inputs para `Mileage`, `Ano`, `Manufacturer` e `Model`,
 - Conversão automática dos nomes para codificações numéricas,
 - Previsão baseada em `RandomForest` com `Price_log` e retorno ao valor original com `expm1`.
 
-Essa etapa transforma o modelo técnico em uma ferramenta prática e acessível, mesmo para quem não entende de machine learning.
+Essa etapa transforma o modelo técnico em uma ferramenta prática e acessível, mesmo para quem não entende de machine learning!
 
 ## **6. Dificuldades e Reflexões**
 
@@ -80,7 +80,7 @@ Esse projeto revelou desafios reais enfrentados em ciência de dados:
 - **Limitações de generalização**: Um modelo que nunca viu uma Ferrari não sabe prever seu preço — ele "chuta".
 
 Este cenário destaca a importância de:
-- Métodos de validação mais robustos (ex: `StratifiedKFold`),
+- Métodos de validação mais robustos,
 - Técnicas para balanceamento de classes ou *augmentation*,
 - Curadoria humana contínua dos dados.
 
@@ -88,10 +88,9 @@ Este cenário destaca a importância de:
 
 Criar um modelo preditivo funcional exige mais do que algoritmos — exige **visão crítica sobre os dados**.
 
-Neste projeto, aprendemos que:
+Neste projeto, aprendi que:
 - A limpeza e transformação dos dados é o coração de qualquer pipeline de ML.
 - A escolha do modelo deve considerar não só performance, mas interpretabilidade e robustez.
-- Ferramentas como Streamlit tornam modelos acessíveis, mas não corrigem dados mal estruturados.
 
 **E você?**  
 - O que faria ao encontrar uma base com tantos ruídos?
