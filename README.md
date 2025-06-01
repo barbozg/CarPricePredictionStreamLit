@@ -98,3 +98,9 @@ Neste projeto, aprendi que:
 - Como garantiria uma melhor generalização?
 
 A ciência de dados é mais do que técnica — é **investigação contínua, adaptação e aprendizado**.
+
+## **8. Tutorial para rodar o projeto**
+- Caso não tenha, baixe as bibliotecas utilizadas
+  pip install streamlit pandas numpy matplotlib seaborn scikit-learn
+- Execute o comando: streamlit run app.py
+
